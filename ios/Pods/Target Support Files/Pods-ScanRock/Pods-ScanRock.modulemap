@@ -1,0 +1,6 @@
+module Pods_ScanRock {
+  umbrella header "Pods-ScanRock-umbrella.h"
+
+  export *
+  module * { export * }
+}
