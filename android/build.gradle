@@ -18,6 +18,11 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+android {
+ defaultConfig {
+ missingDimensionStrategy 'react-native-camera', 'general'
+ }
+}
 
 allprojects {
     repositories {

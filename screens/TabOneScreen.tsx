@@ -7,14 +7,24 @@ import { StyleSheet, Button, SafeAreaView, PermissionsAndroid,
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
-import {CameraKitCameraScreen} from 'react-native-camera-kit';
+import {Camera} from 'react-native-camera-kit';
 
 
 
 export default function TabOneScreen() {
+  const openCamera =() => {
+<View style={styles.cam}>
+        <Camera
+          style={{ flex: 1, alignItems: 'center' }}
+          ref={ref => {
+            this.camera = ref
+          }}
+        />
+      </View>
+  }
   return (
     <View style={styles.container}>
-      <Button title = 'scan'/>
+      <Button title = 'scan' onPress = {openCamera}/>
       
     </View>
   );
@@ -25,6 +35,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  cam: {
+    flex:1,
+    flexDirection: 'column',
+    backgroundColor: 'black'
   },
   title: {
     fontSize: 20,

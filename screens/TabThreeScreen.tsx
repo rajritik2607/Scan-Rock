@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
-
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function TabThreeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Profile</Text>
+      <Text style={styles.title}>ID: </Text>
+      <Text style={styles.title}>Name: </Text>
+      <Text style={styles.title}>Email: </Text>
+      <Text style={styles.title}>No. of Documents: </Text>
       
     </View>
   );
@@ -16,11 +17,10 @@ export default function TabThreeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
   },
   title: {
-    fontSize: 20,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   separator: {
